@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixifiedMods - Моды для Minecraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1 class="logo">FixifiedMods</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Главная</a></li>
+                <li><a href="#mods" class="nav-link">Моды</a></li>
+                <li><a href="#about" class="nav-link">О нас</a></li>
+                <li><a href="#contact" class="nav-link">Контакты</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-secondary">Войти</button>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Лучшие моды для Minecraft</h1>
+                <p class="hero-subtitle">Качественные модификации, созданные с любовью для вашего игрового опыта</p>
+                <div class="hero-buttons">
+                    <a href="#mods" class="btn-primary">Скачать моды</a>
+                    <a href="#about" class="btn-outline">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Моды -->
+    <section id="mods" class="mods-section">
+        <div class="container">
+            <h2 class="section-title">Наши модификации</h2>
+            <div class="mods-grid">
+                <!-- FixifiedTranslator -->
+                <div class="mod-card featured">
+                    <div class="mod-badge">Хит</div>
+                    <div class="mod-image">
+                        <div class="mod-placeholder">🌐</div>
+                    </div>
+                    <div class="mod-info">
+                        <h3 class="mod-title">FixifiedTranslator</h3>
+                        <p class="mod-description">Автоматический перевод чата в Minecraft на 15 языков. Синхронный перевод через Google Translate API.</p>
+                        <div class="mod-meta">
+                            <span class="mod-version">v1.3.0</span>
+                            <span class="mod-loader">Fabric 1.21.11</span>
+                        </div>
+                        <div class="mod-actions">
+                            <div class="download-wrapper">
+                                <button class="btn-primary mod-download" id="downloadBtn">Скачать бесплатно</button>
+                                <div class="download-options" id="downloadOptions">
+                                    <a href="#" class="download-option" id="downloadDirect">
+                                        <span class="option-icon">⬇️</span>
+                                        <div>
+                                            <div class="option-title">Скачать с сайта</div>
+                                            <div class="option-desc">Без перехода на GitHub</div>
+                                        </div>
+                                    </a>
+                                    <a href="https://github.com/your-username/fixifiedtranslator/releases/tag/v1.3.0" target="_blank" class="download-option" id="downloadGithub">
+                                        <span class="option-icon">🐙</span>
+                                        <div>
+                                            <div class="option-title">GitHub Releases</div>
+                                            <div class="option-desc">Перейти на GitHub</div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <button class="btn-secondary mod-details" id="detailsBtn">Подробнее</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Placeholder для будущих модов -->
+                <div class="mod-card coming-soon">
+                    <div class="mod-badge soon">Скоро</div>
+                    <div class="mod-image">
+                        <div class="mod-placeholder">🎮</div>
+                    </div>
+                    <div class="mod-info">
+                        <h3 class="mod-title">Новый мод</h3>
+                        <p class="mod-description">Следующая модификация уже в разработке...</p>
+                        <div class="mod-meta">
+                            <span class="mod-version">???</span>
+                        </div>
+                        <div class="mod-actions">
+                            <button class="btn-disabled" disabled>Скоро в продаже</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">О проекте FixifiedMods</h2>
+            <div class="about-content">
+                <div class="about-feature">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Качество</h3>
+                    <p>Каждый мод проходит тщательное тестирование перед релизом</p>
+                </div>
+                <div class="about-feature">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Обновления</h3>
+                    <p>Регулярные обновления и поддержка новых версий Minecraft</p>
+                </div>
+                <div class="about-feature">
+                    <div class="feature-icon">💬</div>
+                    <h3>Поддержка</h3>
+                    <p>Быстрая помощь и ответы на ваши вопросы</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <h2 class="section-title">Нас рекомендуют</h2>
+            <div class="reviews-slider">
+                <div class="reviews-track">
+                    <div class="review-card">
+                        <div class="review-avatar">🎮</div>
+                        <div class="review-content">
+                            <p class="review-text">"FixifiedTranslator - лучший мод для игры на международных серверах! Теперь понимаю всех!"</p>
+                            <h4 class="review-author">- MinecraftPlayer_2024</h4>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-avatar">⛏️</div>
+                        <div class="review-content">
+                            <p class="review-text">"Наконец-то нормальный переводчик для Minecraft. Работает быстро и без лагов!"</p>
+                            <h4 class="review-author">- CraftMaster_RU</h4>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-avatar">🌟</div>
+                        <div class="review-content">
+                            <p class="review-text">"Играю с друзьями из других стран, и этот мод просто спасение. Рекомендую!"</p>
+                            <h4 class="review-author">- BlockBuilder_Pro</h4>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn slider-prev">‹</button>
+                <button class="slider-btn slider-next">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Связаться с нами</h2>
+            <p class="contact-subtitle">Есть вопросы или предложения? Мы всегда на связи!</p>
+            <div class="contact-links">
+                <a href="#" class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>Telegram</h3>
+                    <p>Скоро будет доступен</p>
+                </a>
+                <a href="#" class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Discord</h3>
+                    <p>Скоро будет доступен</p>
+                </a>
+                <a href="#" class="contact-card">
+                    <div class="contact-icon">🌐</div>
+                    <h3>VK</h3>
+                    <p>Скоро будет доступен</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно мода -->
+    <div class="modal" id="modModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">✕</button>
+            <div class="modal-header">
+                <div class="modal-icon">🌐</div>
+                <h2 class="modal-title">FixifiedTranslator</h2>
+                <span class="modal-version">v1.3.0</span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Описание</h3>
+                    <p>FixifiedTranslator — это мощный мод для Minecraft Fabric, который автоматически переводит входящие сообщения чата на выбранный вами язык. Забудьте о языковых барьерах на международных серверах!</p>
+                </div>
+                <div class="modal-section">
+                    <h3>Возможности</h3>
+                    <ul class="feature-list">
+                        <li>✅ Автоматический перевод всех входящих сообщений</li>
+                        <li>✅ Поддержка 15 языков</li>
+                        <li>✅ Синхронный перевод через Google Translate API</li>
+                        <li>✅ Без миксинов (совместим с Sodium)</li>
+                        <li>✅ Настройки через клавишу F9</li>
+                        <li>✅ Конфиг сохраняется в config/fixifiedtranslator.json</li>
+                        <li>✅ Работает на Fabric 1.21.11</li>
+                    </ul>
+                </div>
+                <div class="modal-section">
+                    <h3>Установка</h3>
+                    <ol class="install-steps">
+                        <li>Установите <a href="https://fabricmc.net/use/installer/" target="_blank">Fabric Loader</a></li>
+                        <li>Скачайте мод и поместите .jar файл в папку <code>mods</code></li>
+                        <li>Запустите Minecraft с Fabric профилем</li>
+                        <li>Нажмите F9 в игре для настройки языка</li>
+                    </ol>
+                </div>
+                <div class="modal-section">
+                    <h3>Системные требования</h3>
+                    <div class="requirements">
+                        <div class="req-item">
+                            <span class="req-label">Версия Minecraft:</span>
+                            <span class="req-value">1.21.11</span>
+                        </div>
+                        <div class="req-item">
+                            <span class="req-label">Загрузчик:</span>
+                            <span class="req-value">Fabric</span>
+                        </div>
+                        <div class="req-item">
+                            <span class="req-label">Java:</span>
+                            <span class="req-value">21+</span>
+                        </div>
+                        <div class="req-item">
+                            <span class="req-label">Размер файла:</span>
+                            <span class="req-value">~50 KB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn-primary modal-download" id="modalDownloadDirect">Скачать v1.3.0</a>
+                <a href="https://github.com/your-username/fixifiedtranslator/releases/tag/v1.3.0" target="_blank" class="btn-secondary">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>FixifiedMods</h3>
+                    <p>Создаём лучшие моды для Minecraft</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#mods">Моды</a></li>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <h4>Документы</h4>
+                    <ul>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                        <li><a href="#">Пользовательское соглашение</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FixifiedMods. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
