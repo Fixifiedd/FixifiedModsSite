@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixifiedMods Auth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="auth-page">
+        <div class="auth-background">
+            <div class="orb orb-a"></div>
+            <div class="orb orb-b"></div>
+            <div class="grid-glow"></div>
+        </div>
+
+        <header class="auth-header">
+            <a href="index.html" class="brand">
+                <span class="brand-mark">FM</span>
+                <span class="brand-text">FixifiedMods</span>
+            </a>
+            <a href="index.html" class="back-link">На главную</a>
+        </header>
+
+        <main class="auth-shell">
+            <section class="auth-promo">
+                <span class="promo-badge">Mods Access</span>
+                <h1>Вход и регистрация для твоего каталога модов</h1>
+                <p>
+                    Подготовим основу под аккаунты уже сейчас: отдельная страница входа,
+                    регистрация и сохранение сессии в браузере до подключения сервера.
+                </p>
+
+                <div class="promo-points">
+                    <div class="promo-card">
+                        <strong>Быстрый старт</strong>
+                        <span>Пользователь может зарегистрироваться и сразу войти.</span>
+                    </div>
+                    <div class="promo-card">
+                        <strong>Готово под backend</strong>
+                        <span>Позже эту форму можно подключить к Firebase, Supabase или своему API.</span>
+                    </div>
+                    <div class="promo-card muted">
+                        <strong>Пока без сервера</strong>
+                        <span>Аккаунты хранятся локально в браузере как временное решение.</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="auth-panel">
+                <div class="panel-top">
+                    <div>
+                        <span class="panel-eyebrow">Fixified Account</span>
+                        <h2 id="panelTitle">Войти в аккаунт</h2>
+                    </div>
+                    <div class="auth-tabs" role="tablist" aria-label="Авторизация">
+                        <button class="auth-tab active" id="loginTab" type="button" data-mode="login">Вход</button>
+                        <button class="auth-tab" id="registerTab" type="button" data-mode="register">Регистрация</button>
+                    </div>
+                </div>
+
+                <div class="status-card" id="currentSessionCard" hidden>
+                    <div>
+                        <span class="session-label">Сейчас выполнен вход</span>
+                        <strong id="currentSessionName">Пользователь</strong>
+                    </div>
+                    <button type="button" class="ghost-button" id="logoutButton">Выйти</button>
+                </div>
+
+                <form class="auth-form" id="authForm">
+                    <label class="field">
+                        <span>Логин</span>
+                        <input type="text" id="username" name="username" placeholder="Например, FixifiedUser" autocomplete="username" required>
+                    </label>
+
+                    <label class="field register-only" id="emailField" hidden>
+                        <span>Email</span>
+                        <input type="email" id="email" name="email" placeholder="name@example.com" autocomplete="email">
+                    </label>
+
+                    <label class="field">
+                        <span>Пароль</span>
+                        <input type="password" id="password" name="password" placeholder="Минимум 6 символов" autocomplete="current-password" required>
+                    </label>
+
+                    <label class="field register-only" id="confirmField" hidden>
+                        <span>Повторите пароль</span>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль" autocomplete="new-password">
+                    </label>
+
+                    <div class="form-meta">
+                        <span class="meta-note" id="formNote">Войди в существующий аккаунт, чтобы продолжить.</span>
+                        <a href="index.html" class="text-link">Вернуться на сайт</a>
+                    </div>
+
+                    <div class="form-message" id="formMessage" aria-live="polite"></div>
+
+                    <button type="submit" class="submit-button" id="submitButton">Войти</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/account-storage.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

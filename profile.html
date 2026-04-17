@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixifiedMods Profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <div class="profile-page">
+        <div class="profile-bg">
+            <div class="blur blur-a"></div>
+            <div class="blur blur-b"></div>
+        </div>
+
+        <header class="profile-header">
+            <a href="index.html" class="brand">
+                <span class="brand-mark">FM</span>
+                <span class="brand-text">FixifiedMods</span>
+            </a>
+
+            <div class="header-actions">
+                <a href="index.html" class="header-link">На главную</a>
+                <button type="button" class="header-button" id="logoutButton">Выйти</button>
+            </div>
+        </header>
+
+        <main class="profile-shell">
+            <section class="profile-hero">
+                <div class="hero-copy">
+                    <span class="eyebrow">Личный кабинет</span>
+                    <h1 id="profileTitle">Добро пожаловать</h1>
+                    <p id="profileSubtitle">Здесь можно настроить внешний вид профиля и привязать Minecraft-аккаунт через ссылку NameMC.</p>
+                </div>
+                <div class="hero-user-card">
+                    <div class="mini-avatar" id="miniAvatar">FM</div>
+                    <div>
+                        <span class="mini-label">Текущий аккаунт</span>
+                        <strong id="currentUsername">User</strong>
+                        <p id="currentEmail">Без email</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="profile-grid">
+                <article class="panel panel-preview">
+                    <div class="panel-head">
+                        <div>
+                            <span class="panel-tag">Minecraft Preview</span>
+                            <h2>Превью профиля игрока</h2>
+                        </div>
+                        <a href="#" class="panel-link" id="nameMcProfileLink" target="_blank" rel="noopener noreferrer" hidden>Открыть NameMC</a>
+                    </div>
+
+                    <div class="skin-stage">
+                        <div class="skin-avatar-wrap">
+                            <img id="skinAvatar" class="skin-avatar" alt="Minecraft avatar" hidden>
+                            <div class="skin-fallback" id="skinFallback">?</div>
+                        </div>
+                        <div class="skin-render-wrap">
+                            <div class="skin-viewer" id="skinViewerWrap" hidden>
+                                <canvas id="skinViewerCanvas" class="skin-viewer-canvas"></canvas>
+                            </div>
+                            <img id="skinRender" class="skin-render" alt="Minecraft skin render" hidden>
+                            <div class="render-placeholder" id="renderPlaceholder">
+                                Вставь ссылку на профиль NameMC, и здесь появится скин игрока.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="viewer-controls">
+                        <button type="button" class="ghost-button viewer-button" id="rotateToggleButton">Автовращение: вкл</button>
+                        <button type="button" class="ghost-button viewer-button" id="animationToggleButton">Анимация: вкл</button>
+                        <button type="button" class="ghost-button viewer-button" id="resetViewButton">Сбросить вид</button>
+                    </div>
+
+                    <div class="profile-meta">
+                        <div class="meta-box">
+                            <span>Ник в Minecraft</span>
+                            <strong id="minecraftNickname">Не указан</strong>
+                        </div>
+                        <div class="meta-box">
+                            <span>Статус синхронизации</span>
+                            <strong id="syncStatus">Не настроено</strong>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="panel panel-settings">
+                    <div class="panel-head">
+                        <div>
+                            <span class="panel-tag">Customization</span>
+                            <h2>Настройки кабинета</h2>
+                        </div>
+                    </div>
+
+                    <form id="profileForm" class="settings-form">
+                        <label class="field">
+                            <span>Отображаемое имя</span>
+                            <input type="text" id="displayNameInput" placeholder="Например, Fixified Creator">
+                        </label>
+
+                        <label class="field">
+                            <span>Ссылка на профиль NameMC</span>
+                            <input type="url" id="nameMcInput" placeholder="https://ru.namemc.com/profile/PlayerNick">
+                        </label>
+
+                        <div class="helper-card">
+                            Поддерживается ссылка на профиль `NameMC`. Из неё будет взят ник игрока, а скин и аватар подтянутся автоматически.
+                        </div>
+
+                        <div class="form-message" id="formMessage" aria-live="polite"></div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="primary-button">Сохранить кабинет</button>
+                            <button type="button" class="ghost-button" id="clearSkinButton">Очистить привязку</button>
+                        </div>
+                    </form>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/skinview3d@3.4.1/bundles/skinview3d.bundle.js"></script>
+    <script src="js/account-storage.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

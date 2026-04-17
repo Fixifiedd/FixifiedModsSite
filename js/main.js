@@ -2,6 +2,19 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
+const authNavLink = document.getElementById('authNavLink');
+
+try {
+    const currentUser = JSON.parse(localStorage.getItem('fixifiedmods_current_user') || 'null');
+
+    if (authNavLink && currentUser?.username) {
+        authNavLink.textContent = currentUser.username;
+        authNavLink.href = 'profile.html';
+        authNavLink.setAttribute('title', 'Открыть страницу аккаунта');
+    }
+} catch {
+    // Ignore invalid local auth state.
+}
 
 // Mobile menu toggle
 hamburger.addEventListener('click', () => {
