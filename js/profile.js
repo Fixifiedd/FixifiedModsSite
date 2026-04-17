@@ -9,6 +9,7 @@ const profileSubtitle = document.getElementById('profileSubtitle');
 const currentUsername = document.getElementById('currentUsername');
 const currentEmail = document.getElementById('currentEmail');
 const miniAvatar = document.getElementById('miniAvatar');
+const profileUserAvatar = document.getElementById('profileUserAvatar');
 const displayNameInput = document.getElementById('displayNameInput');
 const nameMcInput = document.getElementById('nameMcInput');
 const formMessage = document.getElementById('formMessage');
@@ -229,10 +230,16 @@ function renderProfile(user) {
     }
 
     if (profile.avatarUrl) {
+        profileUserAvatar.src = profile.avatarUrl;
+        profileUserAvatar.hidden = false;
+        miniAvatar.hidden = true;
         skinAvatar.src = profile.avatarUrl;
         skinAvatar.hidden = false;
         skinFallback.hidden = true;
     } else {
+        profileUserAvatar.hidden = true;
+        profileUserAvatar.removeAttribute('src');
+        miniAvatar.hidden = false;
         skinAvatar.hidden = true;
         skinFallback.hidden = false;
         skinFallback.textContent = initial;

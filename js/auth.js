@@ -13,6 +13,7 @@ const passwordInput = document.getElementById('password');
 const confirmPasswordInput = document.getElementById('confirmPassword');
 const currentSessionCard = document.getElementById('currentSessionCard');
 const currentSessionName = document.getElementById('currentSessionName');
+const currentSessionAvatar = document.getElementById('currentSessionAvatar');
 const logoutButton = document.getElementById('logoutButton');
 
 let currentMode = 'login';
@@ -73,6 +74,16 @@ function updateSessionCard() {
     }
 
     currentSessionName.textContent = currentUser.username;
+    const avatarUrl = accountGetUserAvatarUrl(currentUser);
+
+    if (avatarUrl) {
+        currentSessionAvatar.src = avatarUrl;
+        currentSessionAvatar.hidden = false;
+    } else {
+        currentSessionAvatar.hidden = true;
+        currentSessionAvatar.removeAttribute('src');
+    }
+
     currentSessionCard.hidden = false;
 }
 

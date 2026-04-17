@@ -79,6 +79,22 @@ body {
     color: var(--primary-light);
 }
 
+.auth-nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-user-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 9px;
+    image-rendering: pixelated;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+}
+
 .btn-outline {
     display: inline-block;
     padding: 12px 32px;
@@ -794,11 +810,68 @@ body {
 .contact-card:hover {
     border-color: var(--primary-light);
     transform: translateY(-5px);
+    box-shadow: var(--shadow);
 }
 
 .contact-icon {
     font-size: 3rem;
     margin-bottom: 20px;
+}
+
+.contact-icon-svg {
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 18px;
+    display: grid;
+    place-items: center;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.contact-icon-svg svg {
+    width: 38px;
+    height: 38px;
+    fill: currentColor;
+}
+
+.contact-chip {
+    display: inline-flex;
+    padding: 7px 12px;
+    margin-bottom: 14px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    color: var(--gray-light);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.contact-card-youtube {
+    color: #fff3f4;
+    border-color: rgba(255, 76, 76, 0.25);
+}
+
+.contact-card-youtube .contact-icon-svg {
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.16), rgba(255, 80, 80, 0.08));
+    color: #ff4d4d;
+}
+
+.contact-card-telegram {
+    color: #eef8ff;
+    border-color: rgba(84, 172, 255, 0.28);
+}
+
+.contact-card-telegram .contact-icon-svg {
+    background: linear-gradient(135deg, rgba(84, 172, 255, 0.16), rgba(64, 128, 255, 0.08));
+    color: #54acff;
+}
+
+.contact-card-discord {
+    color: #f4f2ff;
+    border-color: rgba(126, 135, 255, 0.28);
+}
+
+.contact-card-discord .contact-icon-svg {
+    background: linear-gradient(135deg, rgba(126, 135, 255, 0.16), rgba(88, 101, 242, 0.08));
+    color: #8b92ff;
 }
 
 .contact-card h3 {
@@ -809,6 +882,87 @@ body {
 
 .contact-card p {
     color: var(--gray-light);
+}
+
+/* ===== PROJECTS SECTION ===== */
+.projects-section {
+    padding: 100px 0;
+    background: var(--dark-light);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.projects-cta {
+    display: flex;
+    justify-content: center;
+}
+
+.projects-hero {
+    min-height: 82vh;
+}
+
+.standalone-projects {
+    background: var(--dark-light);
+}
+
+.project-card {
+    position: relative;
+    padding: 34px 30px;
+    border-radius: 24px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+        var(--dark);
+    border: 1px solid rgba(124, 58, 237, 0.18);
+    box-shadow: var(--shadow-sm);
+}
+
+.featured-project {
+    border-color: rgba(16, 185, 129, 0.28);
+}
+
+.project-badge {
+    display: inline-flex;
+    padding: 8px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+    background: rgba(16, 185, 129, 0.14);
+    color: #74f0bf;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.project-badge.alt {
+    background: rgba(124, 58, 237, 0.16);
+    color: #c3a7ff;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 14px;
+}
+
+.project-card p {
+    color: var(--gray-light);
+    margin-bottom: 20px;
+}
+
+.project-meta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.project-meta span {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--gray-light);
+    font-size: 0.85rem;
 }
 
 /* ===== FOOTER ===== */

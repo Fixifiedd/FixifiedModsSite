@@ -3,14 +3,28 @@ const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 const authNavLink = document.getElementById('authNavLink');
+const authNavLabel = document.getElementById('authNavLabel');
+const navUserAvatar = document.getElementById('navUserAvatar');
 
 try {
     const currentUser = JSON.parse(localStorage.getItem('fixifiedmods_current_user') || 'null');
 
     if (authNavLink && currentUser?.username) {
-        authNavLink.textContent = currentUser.username;
+        const avatarUrl = typeof accountGetUserAvatarUrl === 'function'
+            ? accountGetUserAvatarUrl(currentUser)
+            : '';
+
+        if (authNavLabel) {
+            authNavLabel.textContent = currentUser.username;
+        }
+
         authNavLink.href = 'profile.html';
         authNavLink.setAttribute('title', 'Открыть страницу аккаунта');
+
+        if (navUserAvatar && avatarUrl) {
+            navUserAvatar.src = avatarUrl;
+            navUserAvatar.hidden = false;
+        }
     }
 } catch {
     // Ignore invalid local auth state.

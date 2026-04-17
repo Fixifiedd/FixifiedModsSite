@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FixifiedMods - Другие проекты</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1 class="logo">FixifiedMods</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Главная</a></li>
+                <li><a href="index.html#mods" class="nav-link">Моды</a></li>
+                <li><a href="index.html#about" class="nav-link">О нас</a></li>
+                <li><a href="projects.html" class="nav-link active">Другие проекты</a></li>
+                <li><a href="index.html#contact" class="nav-link">Контакты</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="auth.html" class="btn-secondary auth-nav-link" id="authNavLink">
+                    <img src="" alt="Аватар игрока" class="nav-user-avatar" id="navUserAvatar" hidden>
+                    <span id="authNavLabel">Войти</span>
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero projects-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Другие Проекты Fixified</h1>
+                <p class="hero-subtitle">Отдельная страница для приложений, утилит, экспериментальных сборок и будущих релизов.</p>
+                <div class="hero-buttons">
+                    <a href="#project-list" class="btn-primary">Смотреть проекты</a>
+                    <a href="index.html" class="btn-outline">Вернуться на главную</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project-list" class="projects-section standalone-projects">
+        <div class="container">
+            <h2 class="section-title">Скоро Здесь Появится Больше</h2>
+            <p class="contact-subtitle">Пока страница подготовлена как основа. Дальше сюда можно будет добавлять карточки приложений, описания, версии и кнопки скачивания.</p>
+            <div class="projects-grid">
+                <article class="project-card featured-project">
+                    <span class="project-badge">Скоро</span>
+                    <h3>Fixified Launcher Tools</h3>
+                    <p>Будущая категория для лаунчерных инструментов, помощников и desktop-утилит.</p>
+                    <div class="project-meta">
+                        <span>Windows App</span>
+                        <span>Скачивание позже</span>
+                    </div>
+                    <button class="btn-disabled" disabled>Скоро появится</button>
+                </article>
+                <article class="project-card">
+                    <span class="project-badge alt">Draft</span>
+                    <h3>Utility Pack</h3>
+                    <p>Раздел под небольшие приложения, экспериментальные сборки и вспомогательные инструменты.</p>
+                    <div class="project-meta">
+                        <span>Experimental</span>
+                        <span>Будет пополняться</span>
+                    </div>
+                    <button class="btn-disabled" disabled>Ожидает публикации</button>
+                </article>
+                <article class="project-card">
+                    <span class="project-badge alt">Soon</span>
+                    <h3>Community Tools</h3>
+                    <p>Здесь можно будет публиковать отдельные community-проекты и дополнительные загрузки.</p>
+                    <div class="project-meta">
+                        <span>Tools</span>
+                        <span>Новые релизы позже</span>
+                    </div>
+                    <button class="btn-disabled" disabled>Список скоро пополнится</button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>FixifiedMods</h3>
+                    <p>Создаём лучшие моды и готовим новые проекты</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="index.html#mods">Моды</a></li>
+                        <li><a href="index.html#about">О нас</a></li>
+                        <li><a href="projects.html">Другие проекты</a></li>
+                        <li><a href="index.html#contact">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <h4>Документы</h4>
+                    <ul>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                        <li><a href="#">Пользовательское соглашение</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FixifiedMods. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/account-storage.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

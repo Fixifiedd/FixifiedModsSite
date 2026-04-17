@@ -131,3 +131,21 @@ function buildMinecraftProfileFromNickname(nickname, profileUrl = '') {
         skinUrl: `https://mc-heads.net/skin/${cleanedNickname}`
     };
 }
+
+function accountGetUserAvatarUrl(user) {
+    if (!user) {
+        return '';
+    }
+
+    if (user.profile?.avatarUrl) {
+        return user.profile.avatarUrl;
+    }
+
+    const nickname = user.profile?.minecraftNickname;
+
+    if (/^[A-Za-z0-9_]{2,32}$/.test(String(nickname || '').trim())) {
+        return `https://mc-heads.net/avatar/${String(nickname).trim()}/160`;
+    }
+
+    return '';
+}

@@ -210,6 +210,15 @@ a {
     gap: 16px;
 }
 
+.profile-user-avatar {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    image-rendering: pixelated;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
 .mini-avatar {
     background: linear-gradient(135deg, #57a8ff 0%, #43d17d 100%);
     color: #031119;
