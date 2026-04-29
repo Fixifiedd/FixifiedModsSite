@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="site-page">
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h1 class="logo">FixifiedMods</h1>
+                <a href="index.html" class="brand-lockup">
+                    <img src="images/secondlogo.png" alt="Логотип FixifiedMods" class="brand-logo-image">
+                    <h1 class="logo">FixifiedMods</h1>
+                </a>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link active">Главная</a></li>
@@ -39,11 +42,26 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Лучшие моды для Minecraft</h1>
-                <p class="hero-subtitle">Качественные модификации, созданные с любовью для вашего игрового опыта</p>
+                <span class="hero-kicker">FixifiedMods Platform</span>
+                <h1 class="hero-title">Моды, проекты и комьюнити Minecraft в одном профессиональном пространстве</h1>
+                <p class="hero-subtitle">Современная витрина для авторских модификаций, будущих приложений и сообщества вокруг Fixified. Быстро, чисто, с акцентом на качество релизов.</p>
                 <div class="hero-buttons">
                     <a href="#mods" class="btn-primary">Скачать моды</a>
                     <a href="#about" class="btn-outline">Узнать больше</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>1</strong>
+                        <span>активный релиз</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>15</strong>
+                        <span>языков перевода</span>
+                    </div>
+                    <div class="hero-stat">
+                        <strong>24/7</strong>
+                        <span>развитие проекта</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -56,7 +74,7 @@
                 <div class="mod-card featured">
                     <div class="mod-badge">Хит</div>
                     <div class="mod-image">
-                        <div class="mod-placeholder">🌐</div>
+                        <img src="images/logotranslatormod.png" alt="Логотип мода FixifiedTranslator" class="mod-logo-image">
                     </div>
                     <div class="mod-info">
                         <h3 class="mod-title">FixifiedTranslator</h3>
@@ -117,17 +135,17 @@
                 <div class="about-feature">
                     <div class="feature-icon">🎯</div>
                     <h3>Качество</h3>
-                    <p>Каждый мод проходит тщательное тестирование перед релизом</p>
+                    <p>Каждый мод проходит тщательное тестирование перед релизом и собирается как цельный продукт, а не как случайный архив.</p>
                 </div>
                 <div class="about-feature">
                     <div class="feature-icon">🔄</div>
                     <h3>Обновления</h3>
-                    <p>Регулярные обновления и поддержка новых версий Minecraft</p>
+                    <p>Регулярные апдейты, переработки визуала и развитие экосистемы вокруг будущих релизов и инструментов.</p>
                 </div>
                 <div class="about-feature">
                     <div class="feature-icon">💬</div>
                     <h3>Поддержка</h3>
-                    <p>Быстрая помощь и ответы на ваши вопросы</p>
+                    <p>Быстрая связь через Telegram, Discord и YouTube, чтобы комьюнити всегда было рядом с разработкой.</p>
                 </div>
             </div>
         </div>
@@ -168,6 +186,7 @@
 
     <section id="contact" class="contact-section">
         <div class="container">
+            <img src="images/OwnerSite.png" alt="" class="contact-owner-bg" aria-hidden="true">
             <h2 class="section-title">Связаться с нами</h2>
             <p class="contact-subtitle">Все основные площадки уже подключены. Можно быстро перейти на канал, Telegram или Discord-сервер.</p>
             <div class="contact-links">
@@ -220,7 +239,7 @@
         <div class="modal-content">
             <button class="modal-close" id="modalClose">✕</button>
             <div class="modal-header">
-                <div class="modal-icon">🌐</div>
+                <img src="images/logotranslatormod.png" alt="Логотип мода FixifiedTranslator" class="modal-logo-image">
                 <h2 class="modal-title">FixifiedTranslator</h2>
                 <span class="modal-version">v1.3.0</span>
             </div>

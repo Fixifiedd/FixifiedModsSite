@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="site-page projects-page">
     <nav class="navbar">
         <div class="container">
             <div class="nav-brand">
-                <h1 class="logo">FixifiedMods</h1>
+                <a href="index.html" class="brand-lockup">
+                    <img src="images/secondlogo.png" alt="Логотип FixifiedMods" class="brand-logo-image">
+                    <h1 class="logo">FixifiedMods</h1>
+                </a>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link">Главная</a></li>
@@ -39,8 +42,9 @@
     <section class="hero projects-hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Другие Проекты Fixified</h1>
-                <p class="hero-subtitle">Отдельная страница для приложений, утилит, экспериментальных сборок и будущих релизов.</p>
+                <span class="hero-kicker">Future Releases</span>
+                <h1 class="hero-title">Отдельная сцена для приложений, инструментов и следующих запусков</h1>
+                <p class="hero-subtitle">Здесь будет расти вторая ветка бренда Fixified: desktop-инструменты, utility-паки, экспериментальные релизы и отдельные продукты.</p>
                 <div class="hero-buttons">
                     <a href="#project-list" class="btn-primary">Смотреть проекты</a>
                     <a href="index.html" class="btn-outline">Вернуться на главную</a>
@@ -51,38 +55,47 @@
 
     <section id="project-list" class="projects-section standalone-projects">
         <div class="container">
-            <h2 class="section-title">Скоро Здесь Появится Больше</h2>
-            <p class="contact-subtitle">Пока страница подготовлена как основа. Дальше сюда можно будет добавлять карточки приложений, описания, версии и кнопки скачивания.</p>
+            <h2 class="section-title">Мои Другие Проекты</h2>
+            <p class="contact-subtitle">Здесь уже собраны мои текущие наработки и большие идеи. Пока проекты ещё не готовы к релизу, но у каждого уже есть своё направление и своя роль.</p>
             <div class="projects-grid">
-                <article class="project-card featured-project">
+                <article class="project-card featured-project project-card-fixigo">
                     <span class="project-badge">Скоро</span>
-                    <h3>Fixified Launcher Tools</h3>
-                    <p>Будущая категория для лаунчерных инструментов, помощников и desktop-утилит.</p>
+                    <div class="project-art">
+                        <img src="images/FixiGOICON.png" alt="Логотип FixiGO" class="project-logo-image">
+                    </div>
+                    <h3>FixiGO</h3>
+                    <p>CIS-аналог Steam на базе GitHub для свободного размещения программ. Идея ближе к площадке наподобие Modrinth, только для приложений, утилит и самостоятельных релизов.</p>
                     <div class="project-meta">
                         <span>Windows App</span>
-                        <span>Скачивание позже</span>
+                        <span>Platform in development</span>
                     </div>
-                    <button class="btn-disabled" disabled>Скоро появится</button>
+                    <button class="btn-disabled" disabled>Проект в активной задумке</button>
                 </article>
-                <article class="project-card">
-                    <span class="project-badge alt">Draft</span>
-                    <h3>Utility Pack</h3>
-                    <p>Раздел под небольшие приложения, экспериментальные сборки и вспомогательные инструменты.</p>
-                    <div class="project-meta">
-                        <span>Experimental</span>
-                        <span>Будет пополняться</span>
+                <article class="project-card project-card-terraria">
+                    <span class="project-badge alt">In Progress</span>
+                    <div class="project-art">
+                        <img src="images/TerrariaLegacyICON.png" alt="Логотип TerrariaLegacy" class="project-logo-image">
                     </div>
-                    <button class="btn-disabled" disabled>Ожидает публикации</button>
+                    <h3>TerrariaLegacy</h3>
+                    <p>Попытка возродить консольную версию Terraria и вернуть её атмосферу в отдельном переосмысленном проекте. Это история про сохранение ощущения старой версии, а не просто копирование.</p>
+                    <div class="project-meta">
+                        <span>Game revival concept</span>
+                        <span>Legacy direction</span>
+                    </div>
+                    <button class="btn-disabled" disabled>Подготовка концепта и базы</button>
                 </article>
-                <article class="project-card">
-                    <span class="project-badge alt">Soon</span>
-                    <h3>Community Tools</h3>
-                    <p>Здесь можно будет публиковать отдельные community-проекты и дополнительные загрузки.</p>
-                    <div class="project-meta">
-                        <span>Tools</span>
-                        <span>Новые релизы позже</span>
+                <article class="project-card project-card-undertale">
+                    <span class="project-badge alt">Concept</span>
+                    <div class="project-art">
+                        <img src="images/UndertaleG_RemasterICON.png" alt="Логотип Undertale Green Remaster" class="project-logo-image">
                     </div>
-                    <button class="btn-disabled" disabled>Список скоро пополнится</button>
+                    <h3>Undertale Green Remaster</h3>
+                    <p>Проект игры про зелёную душу доброты. Это ремастер-направление с собственным настроением, визуалом и попыткой раскрыть отдельную историю внутри вселенной Undertale.</p>
+                    <div class="project-meta">
+                        <span>Story game</span>
+                        <span>Remaster vision</span>
+                    </div>
+                    <button class="btn-disabled" disabled>Ожидает будущей разработки</button>
                 </article>
             </div>
         </div>
@@ -123,3 +136,4 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
